@@ -11,10 +11,9 @@ import App from './components/app';
 import '../assets/stylesheets/application.scss';
 
 // Reducers
-import channelsReducer from "./reducers/channels_reducer";
 import messagesReducer from "./reducers/messages_reducer";
 import selectedReducer from "./reducers/selected_reducer";
-import currentUserReducer from "./reducers/current_user_reducer";
+import identityReducer from "./reducers/identity_reducer";
 
 // initial State
 
@@ -37,10 +36,10 @@ const initialState = {
 
 // State and reducers
 const reducers = combineReducers({
-  channels: channelsReducer,
+  channels: identityReducer,
   messages: messagesReducer,
   selectedChannel: selectedReducer,
-  currentUser: currentUserReducer
+  currentUser: identityReducer
 });
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
